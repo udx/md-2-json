@@ -46,6 +46,9 @@ var parse = function(mdContent) {
                 var para = checkNextLine(item.text);
                 currentHeading.raw = currentHeading.raw ? currentHeading.raw + para : para;
                 break;
+            case 'code':
+                currentHeading.raw = item.text;
+                break;                
             default:
                 break;
         }
